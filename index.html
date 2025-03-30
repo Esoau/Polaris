@@ -501,7 +501,7 @@
         <div class="container hero-content">
             <h1>Navigate Your Path to College Success</h1>
             <p>Expert guidance from students who've successfully conquered the admissions process at top universities</p>
-            <a href="#contact" class="cta-btn">Get Started Today</a>
+            <a href="#free-consultation" class="cta-btn">Get Started Today</a>
         </div>
     </section>
 
@@ -604,13 +604,112 @@
                 <p>Meet the consultants who will guide your journey</p>
             </div>
             <div class="team-intro">
-                <p>Our team consists of students and recent graduates from top-tier universities including Harvard, Stanford, MIT, Yale, Princeton, and other prestigious institutions. Each consultant has not only navigated the complex admissions process successfully but has also helped numerous students achieve their college dreams.</p>
+                <p>Our team consists of admits from top-tier universities including Princeton, Oxford, Northwestern, and other prestigious institutions. Each consultant has not only navigated the complex admissions process successfully but has also helped numerous students achieve their college dreams.</p>
                 <br>
                 <p>What sets Polaris consultants apart is our firsthand, recent experience with the ever-evolving admissions landscape. We provide insights that are relevant and actionable, drawing from our own successes and our understanding of what admissions committees are looking for today.</p>
                 <br>
                 <div style="background-color: var(--primary); color: var(--white); padding: 25px; border-radius: 8px; text-align: center; margin-top: 20px;">
                     <h3 style="color: var(--secondary); margin-bottom: 15px; font-size: 24px;">2025 Admission Results</h3>
                     <p style="font-size: 18px;">Our students were admitted to Princeton, Berkeley, Dartmouth, Northwestern, John's Hopkins, Brown, UPenn, UCLA, and other top universities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Consultation Section -->
+    <section id="free-consultation" class="free-consultation" style="background-color: var(--light); padding: 80px 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Schedule a Free Consultation</h2>
+                <p>Take the first step toward your dream college with a personalized strategy session</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div style="background-color: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 22px;">What to Expect</h3>
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <svg viewBox="0 0 24 24" width="24" height="24" style="min-width: 24px; margin-right: 10px; margin-top: 2px;">
+                                <circle cx="12" cy="12" r="10" fill="#0a2463"/>
+                                <path d="M8 12l3 3 5-5" stroke="#fff" stroke-width="2" fill="none"/>
+                            </svg>
+                            <span>30-minute personalized video consultation</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <svg viewBox="0 0 24 24" width="24" height="24" style="min-width: 24px; margin-right: 10px; margin-top: 2px;">
+                                <circle cx="12" cy="12" r="10" fill="#0a2463"/>
+                                <path d="M8 12l3 3 5-5" stroke="#fff" stroke-width="2" fill="none"/>
+                            </svg>
+                            <span>Assessment of your current profile</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <svg viewBox="0 0 24 24" width="24" height="24" style="min-width: 24px; margin-right: 10px; margin-top: 2px;">
+                                <circle cx="12" cy="12" r="10" fill="#0a2463"/>
+                                <path d="M8 12l3 3 5-5" stroke="#fff" stroke-width="2" fill="none"/>
+                            </svg>
+                            <span>Tailored recommendations for your goals</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <svg viewBox="0 0 24 24" width="24" height="24" style="min-width: 24px; margin-right: 10px; margin-top: 2px;">
+                                <circle cx="12" cy="12" r="10" fill="#0a2463"/>
+                                <path d="M8 12l3 3 5-5" stroke="#fff" stroke-width="2" fill="none"/>
+                            </svg>
+                            <span>Q&A with a consultant from a top university</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start;">
+                            <svg viewBox="0 0 24 24" width="24" height="24" style="min-width: 24px; margin-right: 10px; margin-top: 2px;">
+                                <circle cx="12" cy="12" r="10" fill="#0a2463"/>
+                                <path d="M8 12l3 3 5-5" stroke="#fff" stroke-width="2" fill="none"/>
+                            </svg>
+                            <span>No obligation to purchase services</span>
+                        </li>
+                    </ul>
+                </div>
+                <div style="background-color: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 22px; text-align: center;">Book Your Session</h3>
+                    <form id="consultationForm" action="https://formspree.io/f/timchao2028@u.northwestern.edu" method="POST">
+                        <div class="form-group">
+                            <label for="consult-name">Full Name</label>
+                            <input type="text" id="consult-name" name="consult-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consult-email">Email Address</label>
+                            <input type="email" id="consult-email" name="consult-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consult-phone">Phone Number</label>
+                            <input type="tel" id="consult-phone" name="consult-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consult-grade">Current Grade</label>
+                            <select id="consult-grade" name="consult-grade" required>
+                                <option value="">Select your grade</option>
+                                <option value="9">Freshman (9th)</option>
+                                <option value="10">Sophomore (10th)</option>
+                                <option value="11">Junior (11th)</option>
+                                <option value="12">Senior (12th)</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferred-date">Preferred Date</label>
+                            <input type="date" id="preferred-date" name="preferred-date" required min="2025-03-31">
+                        </div>
+                        <div class="form-group">
+                            <label for="preferred-time">Preferred Time</label>
+                            <select id="preferred-time" name="preferred-time" required>
+                                <option value="">Select a time slot</option>
+                                <option value="morning">Morning (9AM - 12PM)</option>
+                                <option value="afternoon">Afternoon (1PM - 5PM)</option>
+                                <option value="evening">Evening (6PM - 9PM)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="consult-goals">What are your college goals?</label>
+                            <textarea id="consult-goals" name="consult-goals" required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="Free Consultation Request - Polaris Consulting">
+                        <button type="submit" class="submit-btn" style="background-color: var(--secondary); color: var(--dark);">Schedule My Free Consultation</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -674,26 +773,18 @@
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
+                        <li><a href="#free-consultation">Free Consultation</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#services">Our Services</a></li>
                         <li><a href="#team">Meet the Team</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Essay Coaching</a></li>
-                        <li><a href="#">Application Strategy</a></li>
-                        <li><a href="#">Interview Preparation</a></li>
-                        <li><a href="#">Test Preparation</a></li>
-                    </ul>
-                </div>
                 <div class="footer-contact">
                     <h3>Contact Info</h3>
-                    <p>Email: info@polarisconsulting.com</p>
-                    <p>Phone: (555) 123-4567</p>
-                    <p>Address: 123 College Ave, University City, CA 90210</p>
+                    <p>Email: ycc@u.northwestern.edu</p>
+                    <p>Phone: (425) 209-7723</p>
+                    <p>WeChat: happycharliesun88</p>
                 </div>
             </div>
             <div class="copyright">
@@ -718,9 +809,17 @@
         // Form submission handling
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             // Let the form submit normally to Formspree
-            // Show success modal only after successful submission
             // Formspree will handle the actual email delivery
         });
+        
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            // Let the form submit normally to Formspree
+            // Formspree will handle the actual email delivery
+        });
+
+        // Set minimum date for date picker to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('preferred-date').min = today;
         
 
         
