@@ -108,7 +108,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(10, 36, 99, 0.8), rgba(10, 36, 99, 0.9)), url('/api/placeholder/1200/600') center/cover no-repeat;
+            background: linear-gradient(rgba(10, 36, 99, 0.95), rgba(10, 36, 99, 1));
             height: 80vh;
             color: var(--white);
             display: flex;
@@ -241,19 +241,17 @@
             text-align: center;
         }
         
-        /* Contact & Login Section */
+        /* Contact Section */
         .contact-login {
-            background: linear-gradient(rgba(10, 36, 99, 0.9), rgba(10, 36, 99, 0.8)), url('/api/placeholder/1200/800') center/cover no-repeat;
+            background: linear-gradient(rgba(10, 36, 99, 0.9), rgba(10, 36, 99, 0.8));
             color: var(--white);
         }
         
-        .contact-login-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+        .contact-container {
+            width: 100%;
         }
         
-        .contact-form, .login-form {
+        .contact-form {
             background-color: var(--white);
             padding: 40px;
             border-radius: 10px;
@@ -315,65 +313,7 @@
             background-color: #083180;
         }
         
-        .login-options {
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .login-options a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        .login-options a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Social Login Styles */
-        .social-login {
-            margin-bottom: 20px;
-        }
-        
-        .google-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 12px 15px;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: 500;
-            color: #757575;
-            cursor: pointer;
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-        
-        .google-btn:hover {
-            background-color: #f8f8f8;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-        }
-        
-        .separator {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        .separator::before,
-        .separator::after {
-            content: '';
-            flex: 1;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .separator span {
-            padding: 0 10px;
-            color: #757575;
-            font-size: 14px;
-        }
+
         
         /* Footer */
         footer {
@@ -551,7 +491,6 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#team">Our Team</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="login.html" class="nav-btn">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -668,6 +607,11 @@
                 <p>Our team consists of students and recent graduates from top-tier universities including Harvard, Stanford, MIT, Yale, Princeton, and other prestigious institutions. Each consultant has not only navigated the complex admissions process successfully but has also helped numerous students achieve their college dreams.</p>
                 <br>
                 <p>What sets Polaris consultants apart is our firsthand, recent experience with the ever-evolving admissions landscape. We provide insights that are relevant and actionable, drawing from our own successes and our understanding of what admissions committees are looking for today.</p>
+                <br>
+                <div style="background-color: var(--primary); color: var(--white); padding: 25px; border-radius: 8px; text-align: center; margin-top: 20px;">
+                    <h3 style="color: var(--secondary); margin-bottom: 15px; font-size: 24px;">2025 Admission Results</h3>
+                    <p style="font-size: 18px;">Our students were admitted to Princeton, Berkeley, Dartmouth, Northwestern, John's Hopkins, Brown, UPenn, UCLA, and other top universities.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -679,11 +623,11 @@
                 <h2>Get in Touch</h2>
                 <p>Take the first step toward your dream college</p>
             </div>
-            <div class="container" style="max-width: 600px; margin: 0 auto;">
+            <div class="contact-container" style="max-width: 600px; margin: 0 auto;">
                 <!-- Contact Form -->
                 <div class="contact-form">
                     <h3 class="form-title">Contact Us</h3>
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formspree.io/f/timchao2028@u.northwestern.edu" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
@@ -711,6 +655,7 @@
                             <label for="message">How can we help you?</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
+                        <input type="hidden" name="_subject" value="New Polaris Consulting Inquiry">
                         <button type="submit" class="submit-btn">Submit Request</button>
                     </form>
                 </div>
@@ -757,21 +702,6 @@
         </div>
     </footer>
 
-    <!-- Modal for Forgot Password -->
-    <div id="passwordModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3 class="form-title">Reset Password</h3>
-            <form id="resetForm">
-                <div class="form-group">
-                    <label for="resetEmail">Email Address</label>
-                    <input type="email" id="resetEmail" name="resetEmail" required>
-                </div>
-                <button type="submit" class="submit-btn">Send Reset Link</button>
-            </form>
-        </div>
-    </div>
-    
 
 
     <!-- Modal for Successful Submission -->
@@ -787,34 +717,12 @@
     <script>
         // Form submission handling
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // In a real implementation, this would send data to a server
-            // For demo purposes, just show success modal
-            document.getElementById('successModal').style.display = 'flex';
-        });
-        
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // In a real implementation, this would authenticate the user
-            // For demo purposes, redirect to a dummy portal page
-            alert('Login successful! Redirecting to client portal...');
-            // window.location.href = 'portal.html'; // In production, redirect to actual portal
+            // Let the form submit normally to Formspree
+            // Show success modal only after successful submission
+            // Formspree will handle the actual email delivery
         });
         
 
-        
-        document.getElementById('resetForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // In a real implementation, this would send a password reset email
-            alert('Password reset link has been sent to your email.');
-            document.getElementById('passwordModal').style.display = 'none';
-        });
-        
-        // Modal handling
-        document.getElementById('forgotPassword').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('passwordModal').style.display = 'flex';
-        });
         
         document.getElementById('closeSuccessModal').addEventListener('click', function() {
             document.getElementById('successModal').style.display = 'none';
