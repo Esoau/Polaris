@@ -666,50 +666,10 @@
                 </div>
                 <div style="background-color: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                     <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 22px; text-align: center;">Book Your Session</h3>
-                    <form id="consultationForm" action="https://formspree.io/f/timchao2028@u.northwestern.edu" method="POST">
-                        <div class="form-group">
-                            <label for="consult-name">Full Name</label>
-                            <input type="text" id="consult-name" name="consult-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="consult-email">Email Address</label>
-                            <input type="email" id="consult-email" name="consult-email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="consult-phone">Phone Number</label>
-                            <input type="tel" id="consult-phone" name="consult-phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="consult-grade">Current Grade</label>
-                            <select id="consult-grade" name="consult-grade" required>
-                                <option value="">Select your grade</option>
-                                <option value="9">Freshman (9th)</option>
-                                <option value="10">Sophomore (10th)</option>
-                                <option value="11">Junior (11th)</option>
-                                <option value="12">Senior (12th)</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="preferred-date">Preferred Date</label>
-                            <input type="date" id="preferred-date" name="preferred-date" required min="2025-03-31">
-                        </div>
-                        <div class="form-group">
-                            <label for="preferred-time">Preferred Time</label>
-                            <select id="preferred-time" name="preferred-time" required>
-                                <option value="">Select a time slot</option>
-                                <option value="morning">Morning (9AM - 12PM)</option>
-                                <option value="afternoon">Afternoon (1PM - 5PM)</option>
-                                <option value="evening">Evening (6PM - 9PM)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="consult-goals">What are your college goals?</label>
-                            <textarea id="consult-goals" name="consult-goals" required></textarea>
-                        </div>
-                        <input type="hidden" name="_subject" value="Free Consultation Request - Polaris Consulting">
-                        <button type="submit" class="submit-btn" style="background-color: var(--secondary); color: var(--dark);">Schedule My Free Consultation</button>
-                    </form>
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/timchao2028-u/tutoring" style="min-width:320px;height:630px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <!-- Calendly inline widget end -->
                 </div>
             </div>
         </div>
@@ -811,15 +771,6 @@
             // Let the form submit normally to Formspree
             // Formspree will handle the actual email delivery
         });
-        
-        document.getElementById('consultationForm').addEventListener('submit', function(e) {
-            // Let the form submit normally to Formspree
-            // Formspree will handle the actual email delivery
-        });
-
-        // Set minimum date for date picker to today
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('preferred-date').min = today;
         
 
         
